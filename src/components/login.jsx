@@ -1,40 +1,40 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import './loginui.css';
-import email from './email.png';
-import profile from './person.png';
-import pass from './lock.png';
+import hero from './hero-1.jpg'
+
 class Login extends Component{
   render(){
   return (
-    <div className="main">
-     <div className="sub-main">
-       <div>
-         <div className="imgs">
-           <div className="container-image">
-             <img src={profile} alt="profile" className="profile"/>
-           </div>
-         </div>
-         <div style={{fontFamily: 'Shalimar cursive'}}>
-           <h1>Login Page</h1>
-           <div>
-             <img src={email} alt="email" className="email"/>
-             <input type="text" placeholder="Username" className="name"/>
-           </div>
-           <div className="second-input">
-             <img src={pass} alt="pass" className="email"/>
-             <input type="password" placeholder="Password" className="name"/>
-           </div>
-          <div className="login-button">
-          <button style={{width: 380}}>Login</button>
+    <div className='root'>
+      <div className='hero'>
+        <div classname='hero-image'>
+          <img src={hero} alt="hero" className='hero-image'/>
+        </div>
+      </div>
+      <div className="main">
+        <div className='login-container'>
+          <h1>Welcome!</h1>
+          <div className='linkup-button'>
+            <button>Sign in with Google</button>
+            <h5>Or</h5>
           </div>
-            <p className="link">
-              <br/> <a href="http://localhost:3000/SignUp">Sign Up</a>
-            </p>
-         </div>
-       </div>
-     </div>
-     </div>
+          <div className='form-inputs'>
+            <label>Username</label>
+            <input type="text" placeholder="" value="" name="username"/>
+          </div>
+          <div className='form-inputs'>
+            <label>Password</label>
+            <h6 className='forgot-pass'><a href="http://localhost:3000/SignUp">Forgot Password?</a></h6>
+            <input type="password" placeholder="" value="" name="password"/>
+          </div>
+          <div className='login-button'>
+            <button>Login</button>
+            <h6 className='sign-up-prompt'>Haven't jiffed before? <a href="http://localhost:3000/SignUp" className='sign-up-anchor'>Sign up now</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
   )
   }
 }
